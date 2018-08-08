@@ -91,7 +91,7 @@ public class LoginController extends BaseController {
         PermissionDto root = null;
         for (PermissionDto child : pds) {
             String pid = child.getPid();
-            if ("0".equals(child.getPid())) {
+            if ("0".equals(pid)) {
                 root = child;
             } else {
                 PermissionDto parent = permissionDtoMap.get(pid);

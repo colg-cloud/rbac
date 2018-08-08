@@ -87,9 +87,9 @@ public class RoleServiceImpl extends BaseServiceImpl implements RoleService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public void insertRolePermission(String roleId, String[] permissionIds) {
-        // 先清空所有许可
+        // 先清空所有许可（负向授权）
         roleMapper.deleteRolePermission(roleId);
-        // 再重新设置许可
+        // 再重新设置许可（正向授权）
         roleMapper.insertRolePermission(roleId, permissionIds);
     }
 

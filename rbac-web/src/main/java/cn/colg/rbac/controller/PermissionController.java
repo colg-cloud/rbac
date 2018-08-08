@@ -24,7 +24,7 @@ import static cn.colg.rbac.util.ResultVoUtil.success;
 public class PermissionController extends BaseController {
 
     /**
-     * 菜单树形结构（角色已拥有的勾选）
+     * 回显菜单树形结构（角色已拥有的勾选）
      *
      * @param roleId
      * @return

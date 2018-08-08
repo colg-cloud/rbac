@@ -286,7 +286,7 @@
                         layer.close(loadingIndex);
                         if (result.code === 0) {
                             layer.msg('用户信息删除成功', {time: 1000, icon: 6, shift: 5}, function () {
-                                window.location.href = '${applicationScope.APP_PATH}/user/index'
+                                window.location.href = '${applicationScope.APP_PATH}/user/list'
                             })
                         } else {
                             layer.msg(result.message, {time: 1000, icon: 5, shift: 6})

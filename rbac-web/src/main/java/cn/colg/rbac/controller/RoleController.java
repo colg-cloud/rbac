@@ -29,7 +29,6 @@ public class RoleController extends BaseController {
         return success();
     }
 
-
     /**
      * 权限分配页面
      *

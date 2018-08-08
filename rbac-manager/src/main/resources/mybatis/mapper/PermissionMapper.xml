@@ -45,7 +45,7 @@
     </select>
 
     <select id="queryPermissionsByUser" resultType="cn.colg.rbac.dto.PermissionDto">
-        SELECT *
+        SELECT p.*
         FROM
             permission p
         WHERE
