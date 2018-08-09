@@ -26,7 +26,6 @@ import static cn.colg.rbac.util.ResultVoUtil.success;
 @Controller
 public class LoginController extends BaseController {
 
-
     /**
      * 错误页面
      *
