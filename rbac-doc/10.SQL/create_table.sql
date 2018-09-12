@@ -47,3 +47,22 @@ create table user
 );
 
 alter table user comment '用户表';
+
+-- /// ----------------------------------------------------------------------------------------------------
+-- 创建用户
+CREATE USER 'rbac' IDENTIFIED BY '123456';
+
+-- 为用户授权
+GRANT ALL ON rbac.* TO 'rbac';
+
+-- 刷新权限
+FLUSH PRIVILEGES;
+
+-- 查看host、用户、密码
+SELECT Host, User, authentication_string FROM mysql.user;
+
+-- 删除用户及权限
+DROP USER 'colg';
+
+-- 修改密码
+UPDATE mysql.user SET authentication_string = PASSWORD('123456') WHERE User = 'colg';
