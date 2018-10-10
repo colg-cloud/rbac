@@ -109,14 +109,14 @@
         $(function () {
             $(".list-group-item").click(function () {
                 if ($(this).find("ul")) {
-                    $(this).toggleClass("tree-closed");
+                    $(this).toggleClass("tree-closed")
                     if ($(this).hasClass("tree-closed")) {
-                        $("ul", this).hide("fast");
+                        $("ul", this).hide("fast")
                     } else {
-                        $("ul", this).show("fast");
+                        $("ul", this).show("fast")
                     }
                 }
-            });
+            })
 
             // 分页查询，默认从第一页开始查
             pageQuery(1)
@@ -134,7 +134,7 @@
                     this.checked = self.checked
                 })
             })
-        });
+        })
 
         $("tbody .btn-success").click(function () {
             window.location.href = "assign${applicationScope.APP_PATH}/role/list";

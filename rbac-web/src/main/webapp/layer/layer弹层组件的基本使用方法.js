@@ -24,11 +24,3 @@
 			
 			let index = layer.load(2, {time: 10*1000})
 			layer.close(index)
-			
-			
-			
-			
-			
-			
-		   
-		   

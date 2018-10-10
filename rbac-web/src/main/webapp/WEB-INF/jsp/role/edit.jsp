@@ -92,14 +92,14 @@
         $(function () {
             $(".list-group-item").click(function () {
                 if ($(this).find("ul")) {
-                    $(this).toggleClass("tree-closed");
+                    $(this).toggleClass("tree-closed")
                     if ($(this).hasClass("tree-closed")) {
-                        $("ul", this).hide("fast");
+                        $("ul", this).hide("fast")
                     } else {
-                        $("ul", this).show("fast");
+                        $("ul", this).show("fast")
                     }
                 }
-            });
+            })
 
             $('#resetBtn').click(function () {
                 // jQuery[0]    ===> DOM
@@ -138,7 +138,7 @@
                     }
                 })
             })
-        });
+        })
     </script>
 </body>
 </html>

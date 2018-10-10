@@ -89,14 +89,14 @@
         $(function () {
             $(".list-group-item").click(function () {
                 if ($(this).find("ul")) {
-                    $(this).toggleClass("tree-closed");
+                    $(this).toggleClass("tree-closed")
                     if ($(this).hasClass("tree-closed")) {
-                        $("ul", this).hide("fast");
+                        $("ul", this).hide("fast")
                     } else {
-                        $("ul", this).show("fast");
+                        $("ul", this).show("fast")
                     }
                 }
-            });
+            })
 
             // 树形结构
             let setting = {
@@ -151,7 +151,7 @@
 
             // 异步获取属性结构数据
             $.fn.zTree.init($("#permissionTree"), setting)
-        });
+        })
 
         // 跳转添加许可页面
         function addNode(id) {
