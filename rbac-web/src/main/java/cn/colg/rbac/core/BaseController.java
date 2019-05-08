@@ -6,7 +6,7 @@ import cn.colg.rbac.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * controller 基类
+ * BaseController 基类
  *
  * @author colg
  */

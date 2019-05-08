@@ -7,5 +7,5 @@
 
     <!-- 组件扫描 扫描所有标记@Service类 -->
     <context:component-scan base-package="cn.colg.rbac.service" />
-    
+
 </beans>

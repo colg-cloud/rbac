@@ -135,10 +135,9 @@ public class UserController extends BaseController {
     @GetMapping("/edit")
     public String edit(@RequestParam String id, Model model) {
         User user = userService.findById(id);
-        model.addAttribute("user", user);
+        model.addAttribute("user", user.setPassword(null));
         return "user/edit";
     }
-
 
     /**
      * 添加用户

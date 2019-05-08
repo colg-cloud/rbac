@@ -57,13 +57,11 @@ public class ResultVoUtil {
     private static void convertData(Object data, ResultVo resultVo) {
         if (data instanceof Page<?>) {
             Page<?> page = (Page<?>) data;
-            resultVo.setData(page.getResult())
-                    .setTotal(page.getTotal());
+            resultVo.setData(page.getResult()).setTotal(page.getTotal());
 
         } else if (data instanceof Collection<?>) {
             List<?> list = (List<?>) data;
-            resultVo.setData(list)
-                    .setTotal((long) list.size());
+            resultVo.setData(list).setTotal((long) list.size());
         } else {
             resultVo.setData(data);
         }

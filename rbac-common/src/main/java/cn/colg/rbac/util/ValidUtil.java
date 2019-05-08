@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 /**
  * 字段验证工具
- * 
+ *
  * <a href="http://www.runoob.com/java/java-regular-expressions.html">正则表达式</a>
  *
  * @author colg
@@ -65,9 +65,9 @@ public final class ValidUtil {
 
     /**
      * 通过正则对象校验
-     * 
+     *
      * @param pattern 正在表达式的编译对象
-     * @param value 值
+     * @param value   值
      * @return 满足返回true，不满足返回false
      */
     public static boolean isMatch(Pattern pattern, String value) {
@@ -83,7 +83,7 @@ public final class ValidUtil {
 
     /**
      * 通过正则表达式校验
-     * 
+     *
      * @param regex 正则表达式
      * @param value 值
      * @return 满足返回true，不满足返回false
@@ -101,7 +101,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>数字</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -115,7 +115,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>整数</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -129,7 +129,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>正整数</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -143,7 +143,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>英文字母 、数字和下划线</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -171,7 +171,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>中文汉字</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -185,7 +185,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>中文字、英文字母、数字和下划线</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -199,7 +199,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>用户名</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -227,7 +227,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>IP v4</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -241,7 +241,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>货币</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -255,7 +255,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>邮箱</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -269,7 +269,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>移动电话/手机号码</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -283,7 +283,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>固定电话/座机</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -297,7 +297,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>18位身份证号码</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -311,7 +311,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>邮编</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -325,7 +325,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>生日</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -339,7 +339,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>URL</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -354,7 +354,7 @@ public final class ValidUtil {
     /**
      * 验证是否为 <b>UUID</b><br>
      * 包括带横线标准格式和不带横线的简单模式
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -368,7 +368,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>中国车牌号码</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */
@@ -382,7 +382,7 @@ public final class ValidUtil {
 
     /**
      * 验证是否为 <b>MAC地址</b>
-     * 
+     *
      * @param value 值
      * @return 满足返回true，不满足返回false
      */

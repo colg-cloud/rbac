@@ -1,10 +1,11 @@
 package cn.colg.rbac.controller;
 
+import cn.hutool.core.lang.Dict;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import cn.hutool.core.lang.Dict;
+import java.util.Date;
 
 /**
  * 测试是否能通
@@ -23,6 +24,8 @@ public class HelloController {
     @RequestMapping("/json")
     @ResponseBody
     public Dict json() {
-        return new Dict(2).set("hello", "Json");
+        return Dict.create()
+                   .set("hello", "JSON")
+                   .set("requestDate", new Date());
     }
 }

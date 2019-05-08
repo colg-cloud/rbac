@@ -1,12 +1,15 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<%@ page language="java" contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
 <html>
+<head>
+<title>创意产品众筹平台</title>
+<link rel="stylesheet" href="${applicationScope.APP_PATH}/static/bootstrap/css/bootstrap.min.css">
+</head>
 <body>
-    <h2>Hello World! ${applicationScope.APP_PATH}</h2>
-    <h3>Hello World! ${pageContext.request.contextPath}</h3>
+  <h2>Hello World! ${applicationScope.APP_PATH}</h2>
+  <h3>Hello World! ${pageContext.request.contextPath}</h3>
 
-    <%--跳转到登录页面--%>
-    <jsp:forward page="WEB-INF/jsp/login.jsp" />
+  <%--跳转到登录页面--%>
+  <jsp:forward page="WEB-INF/jsp/login.jsp"/>
 </body>
 </html>

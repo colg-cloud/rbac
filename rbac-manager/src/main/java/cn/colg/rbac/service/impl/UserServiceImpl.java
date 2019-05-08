@@ -46,7 +46,7 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
         checkUser(user);
 
         user.setId(RandomUtil.simpleUUID())
-                .setPassword("123456");
+            .setPassword("123456");
 
         userMapper.insertSelective(user);
     }

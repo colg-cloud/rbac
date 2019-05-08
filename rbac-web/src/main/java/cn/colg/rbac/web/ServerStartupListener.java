@@ -26,7 +26,8 @@ public class ServerStartupListener implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-
+        sce.getServletContext().getAttribute("APP_PATH");
+        log.info("APP_PATH: {}, 容器销毁", sce.getServletContext().getAttribute("APP_PATH"));
     }
 }
 

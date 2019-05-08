@@ -19,7 +19,7 @@
         <mvc:message-converters>
             <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
                 <property name="supportedMediaTypes">
-                    <list>
+                    <list value-type="org.springframework.http.MediaType">
                         <value>application/json;charset=UTF-8</value>
                     </list>
                 </property>
@@ -59,24 +59,16 @@
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/login" />
             <mvc:exclude-mapping path="/doAjaxLogin" />
-            <mvc:exclude-mapping path="/bootstrap/**" />
-            <mvc:exclude-mapping path="/fonts/**" />
-            <mvc:exclude-mapping path="/img/**" />
-            <mvc:exclude-mapping path="/jquery/**" />
-            <mvc:exclude-mapping path="/layer/**" />
-            <mvc:exclude-mapping path="/script/**" />
+            <mvc:exclude-mapping path="/hello/**" />
+            <mvc:exclude-mapping path="/static/**" />
             <bean class="cn.colg.rbac.web.LoginInterceptor" />
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/login" />
             <mvc:exclude-mapping path="/doAjaxLogin" />
-            <mvc:exclude-mapping path="/bootstrap/**" />
-            <mvc:exclude-mapping path="/fonts/**" />
-            <mvc:exclude-mapping path="/img/**" />
-            <mvc:exclude-mapping path="/jquery/**" />
-            <mvc:exclude-mapping path="/layer/**" />
-            <mvc:exclude-mapping path="/script/**" />
+            <mvc:exclude-mapping path="/hello/**" />
+            <mvc:exclude-mapping path="/static/**" />
             <bean class="cn.colg.rbac.web.AuthInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>

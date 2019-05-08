@@ -4,6 +4,8 @@ import cn.colg.rbac.core.BaseController;
 import cn.colg.rbac.dto.PermissionDto;
 import cn.colg.rbac.entity.User;
 import cn.colg.rbac.vo.ResultVo;
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.StrUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static cn.colg.rbac.util.CheckUtil.checkNotNull;
 import static cn.colg.rbac.util.ResultVoUtil.success;
@@ -70,20 +74,21 @@ public class LoginController extends BaseController {
         User dbUser = userService.findUser(user);
         checkNotNull(dbUser, "登录帐号或密码不正确，请重新输入");
         // 保存登录用户
-        session.setAttribute("loginUser", dbUser);
+        session.setAttribute("loginUser", dbUser.setPassword(null));
         // 获取用户权限信息
         List<PermissionDto> pds = permissionService.queryPermissionsByUser(dbUser);
-        Map<String, PermissionDto> permissionDtoMap = new HashMap<>(16);
+        Map<String, PermissionDto> permissionDtoMap = MapUtil.newHashMap(16);
         // 保存uri
-        Set<String> uriSet = new HashSet<>();
-        for (PermissionDto pd : pds) {
+        Set<String> uriSet = CollUtil.newHashSet();
+        pds.forEach(pd -> {
             permissionDtoMap.put(pd.getId(), pd);
 
             String url = pd.getUrl();
             if (StrUtil.isNotBlank(url)) {
                 uriSet.add(session.getServletContext().getContextPath() + url);
             }
-        }
+        });
+
         // 保存用户的url
         session.setAttribute("authUriSet", uriSet);
 

@@ -20,7 +20,7 @@ public final class CheckUtil {
     /**
      * 表达式的结果为 false 时，抛出校验异常
      *
-     * @param bool 校验条件
+     * @param bool    校验条件
      * @param message 消息提示
      * @author colg
      */
@@ -33,7 +33,7 @@ public final class CheckUtil {
     /**
      * 表达式的结果为 true 时，抛出校验异常
      *
-     * @param bool 校验条件
+     * @param bool    校验条件
      * @param message 消息提示
      * @author colg
      */
@@ -45,8 +45,8 @@ public final class CheckUtil {
 
     /**
      * Object 为null时，抛出校验异常
-     * 
-     * @param value 校验的对象
+     *
+     * @param value   校验的对象
      * @param message 消息提示
      * @author colg
      */
@@ -59,7 +59,7 @@ public final class CheckUtil {
     /**
      * 对象不为 null 时，抛出校验异常
      *
-     * @param value 校验的对象
+     * @param value   校验的对象
      * @param message 消息提示
      * @author colg
      */
@@ -75,7 +75,7 @@ public final class CheckUtil {
      * 2、String: 为不可见字符（如空格） <br>
      * 3、String: "" <br>
      *
-     * @param value 校验的字符串
+     * @param value   校验的字符串
      * @param message 错误消息
      * @author colg
      */
@@ -90,8 +90,8 @@ public final class CheckUtil {
      * 1、String: null
      * 2、String: 为不可见字符（如空格） <br>
      * 3、String: "" <br>
-     * 
-     * @param value 校验的字符串
+     *
+     * @param value   校验的字符串
      * @param message 消息提示
      * @author colg
      */
@@ -105,7 +105,7 @@ public final class CheckUtil {
      * 为空时，抛出校验异常
      *
      * @param collection 校验的集合
-     * @param message 消息提示
+     * @param message    消息提示
      * @author colg
      */
     public static void checkNotNull(Collection<?> collection, String message) {
@@ -118,7 +118,7 @@ public final class CheckUtil {
      * Collection 为非空时，抛出校验异常
      *
      * @param collection 校验的集合
-     * @param message 消息提示
+     * @param message    消息提示
      * @author colg
      */
     public static void checkNull(Collection<?> collection, String message) {
@@ -130,7 +130,7 @@ public final class CheckUtil {
     /**
      * Map 为空时，抛出校验异常
      *
-     * @param map 校验的map
+     * @param map     校验的map
      * @param message 消息提示
      * @author colg
      */
@@ -143,7 +143,7 @@ public final class CheckUtil {
     /**
      * Map 为非空时，抛出校验异常
      *
-     * @param map 校验的map
+     * @param map     校验的map
      * @param message 消息提示
      * @author colg
      */
@@ -162,7 +162,7 @@ public final class CheckUtil {
     public static void throwFail(String message) {
         throw new CheckException(message);
     }
-    
+
     /**
      * 抛出运行时异常
      *

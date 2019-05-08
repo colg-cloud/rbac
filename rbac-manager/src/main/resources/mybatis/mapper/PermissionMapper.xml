@@ -36,7 +36,7 @@
             permission p
     </select>
 
-    <select id="queryPermissionIdsByRoleId" resultType="java.lang.String">
+    <select id="queryPermissionIdsByRoleId" resultType="string">
         SELECT rp.permission_id
         FROM
             role_permission rp

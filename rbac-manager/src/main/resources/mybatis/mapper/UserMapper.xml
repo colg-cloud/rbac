@@ -5,13 +5,13 @@
         <!--
           WARNING - @mbg.generated
         -->
-        <id column="id" jdbcType="VARCHAR" property="id"/>
-        <result column="username" jdbcType="VARCHAR" property="username"/>
-        <result column="loginacct" jdbcType="VARCHAR" property="loginacct"/>
-        <result column="password" jdbcType="VARCHAR" property="password"/>
-        <result column="email" jdbcType="VARCHAR" property="email"/>
-        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
-        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="loginacct" jdbcType="VARCHAR" property="loginacct" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     </resultMap>
 
     <delete id="delUsers">
@@ -44,7 +44,7 @@
         )
     </delete>
 
-    <select id="selectRoleIdsByUserId" resultType="java.lang.String">
+    <select id="selectRoleIdsByUserId" resultType="string">
         SELECT
             ur.role_id
         FROM
